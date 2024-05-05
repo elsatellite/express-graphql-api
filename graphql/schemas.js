@@ -11,6 +11,13 @@ export const schemas = `#graphql
   }
 
   # Models
+  type Text {
+    _id: ID!
+    imageUri: String!
+    text: String!
+  }
+
+  # Models
   type Post {
     _id: ID!
     author: User!
@@ -46,6 +53,12 @@ export const schemas = `#graphql
   }
 
   # Inputs
+  input TextInput {
+    body: String!
+    location: String!
+    authorId: ID!
+  }
+
   input PostInput {
     body: String!
     location: String!
